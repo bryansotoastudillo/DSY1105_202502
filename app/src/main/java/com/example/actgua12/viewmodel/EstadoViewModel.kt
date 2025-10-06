@@ -25,7 +25,7 @@ class EstadoViewModel (application: Application): AndroidViewModel(application) 
 
     fun cargarEstado(){
         viewModelScope.launch {
-            delay(1500)
+            delay(1000)
             _activo.value = estadoDataStore.obtenerResultado().first() ?:false
         }
     }

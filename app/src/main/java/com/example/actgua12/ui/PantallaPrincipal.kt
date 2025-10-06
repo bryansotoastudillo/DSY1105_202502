@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.actgua12.viewmodel.EstadoViewModel
+import kotlinx.coroutines.delay
 
 @Composable
 fun PantallaPrincipal(modifier: Modifier,viewModel: EstadoViewModel = viewModel()){
@@ -33,12 +35,16 @@ fun PantallaPrincipal(modifier: Modifier,viewModel: EstadoViewModel = viewModel(
     val estado = viewModel.activo.collectAsState()
     val mostrarMensaje= viewModel.mostrarMensaje.collectAsState()
 
+
+
     if(estado.value== null){
         Box(
             modifier=modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ){
             CircularProgressIndicator()
+            //LinearProgressIndicator()
+
         }
     }else{
         val estadoActivo= estado.value!!
@@ -64,8 +70,7 @@ fun PantallaPrincipal(modifier: Modifier,viewModel: EstadoViewModel = viewModel(
         Button(
             onClick = {viewModel.alternarEstado()},
             colors = ButtonDefaults.buttonColors(containerColor = colorAnimado),
-            modifier = Modifier.
-            fillMaxSize().height(60.dp)
+            modifier = Modifier.height(50.dp)
         ) {
             Text(textoBoton, style = MaterialTheme.typography.titleLarge)
         }
