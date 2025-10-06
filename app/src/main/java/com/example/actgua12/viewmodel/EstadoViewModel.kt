@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 class EstadoViewModel (application: Application): AndroidViewModel(application) {
@@ -25,7 +26,7 @@ class EstadoViewModel (application: Application): AndroidViewModel(application) 
     fun cargarEstado(){
         viewModelScope.launch {
             delay(1500)
-            _activo.value = estadoDataStore.obtenerEstado.first() ?:false
+            _activo.value = estadoDataStore.obtenerResultado().first() ?:false
         }
     }
 
