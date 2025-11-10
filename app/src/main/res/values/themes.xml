@@ -1,0 +1,15 @@
+<resources>
+    <!-- App theme using Material Components (XML) -->
+    <style name="Theme.DuocDSY1105" parent="Theme.Material3.DayNight.NoActionBar"/>
+    
+    <!-- Splash theme -->
+    <style name="Theme.DuocDSY1105.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Android 12+ Splash API -->
+        <item name="android:windowSplashScreenBackground">@color/duoc_primary</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/duoc_secondary</item>
+
+        <!-- Fallback pre-Android 12 -->
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+</resources>

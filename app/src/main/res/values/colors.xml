@@ -1,0 +1,11 @@
+<resources>
+    <color name="duoc_primary">#003B5C</color>
+    <color name="duoc_on_primary">#FFFFFFFF</color>
+    <color name="duoc_secondary">#FFC20E</color>
+    <color name="duoc_on_secondary">#FF000000</color>
+
+    <color name="app_bg">#FFFFFFFF</color>
+    <color name="app_surface">#FFFFFFFF</color>
+
+    <string name="brand_note">Colores aproximados al estándar institucional (Azul/Amarillo).</string>
+</resources>

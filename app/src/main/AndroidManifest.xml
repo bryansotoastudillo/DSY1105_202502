@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cl.duoc.dsy1105.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DuocDSY1105">
+
+        <!-- Launcher: SplashActivity -->
+        <activity
+            android:name="cl.duoc.dsy1105.app.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DuocDSY1105.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main activity (destino del splash) -->
+        <activity
+            android:name="cl.duoc.dsy1105.app.MainActivity"
+            android:exported="true" />
+    </application>
+</manifest>

@@ -1,0 +1,4 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/duoc_primary" />
+    <!-- Opcional: podrías centrar un ícono, pero para compatibilidad pre-12 dejamos sólo color -->
+</layer-list>
